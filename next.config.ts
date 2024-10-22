@@ -10,6 +10,7 @@ const nextConfig: NextConfig = {
     unoptimized: true, // Disable default image optimization
   },
   assetPrefix: isProd ? `/${repoName}/` : "",
+  // basePath: isProd ? `/${repoName}` : "",
 };
 
 module.exports = nextConfig;
