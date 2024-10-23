@@ -3,25 +3,26 @@
 import { useEffect, useState } from "react";
 
 const Home = () => {
-  const [descText, setDescText] = useState<string>("개발자");
+  const [descText, setDescText] = useState<string>("개발자 A");
 
   useEffect(() => {
     const textLoad = () => {
-      setTimeout(() => {
-        setDescText("개발자 A");
-      }, 0);
+      setDescText("개발자 A");
 
       setTimeout(() => {
         setDescText("개발자 B");
-      }, 4000);
+      }, 2500);
 
       setTimeout(() => {
         setDescText("개발자 C");
-      }, 8000);
+      }, 5000);
     };
 
     textLoad();
-    setInterval(textLoad, 12000);
+
+    const interval = setInterval(textLoad, 7500);
+
+    return () => clearInterval(interval);
   }, []);
 
   return (
