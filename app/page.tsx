@@ -1,3 +1,8 @@
-const homePage = () => <div className={"aggroB home"}>homePage</div>;
+import Home from "./_components/home";
+const homePage = () => (
+  <div>
+    <Home />
+  </div>
+);
 
 export default homePage;

@@ -1,0 +1,66 @@
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  min-height: 100vh;
+  overflow: hidden;
+  &__name {
+    text-align: center;
+
+    .first-text {
+      color: var(--maincolor);
+      font-size: 16px;
+      letter-spacing: 4px;
+    }
+
+    .sec-text {
+      margin-top: 12px;
+      font-size: 40px;
+    }
+  }
+
+  &__desc {
+    margin-top: 20px;
+    position: relative;
+    font-size: 32px;
+
+    color: var(--maincolor);
+    .text {
+      position: relative;
+    }
+
+    .first-text {
+      color: var(--foreground);
+    }
+    .sec-text {
+      font-size: 36px;
+    }
+
+    .sec-text:before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: 0;
+      height: 100%;
+      width: 100%;
+
+      background-color: var(--background);
+      border-left: 2px solid var(--pointcolor);
+
+      animation: animate 2.5s steps(4) infinite;
+    }
+
+    @keyframes animate {
+      40%,
+      60% {
+        left: 100%;
+      }
+
+      100% {
+        left: 0%;
+      }
+    }
+  }
+}
