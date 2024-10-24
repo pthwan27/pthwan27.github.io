@@ -38,28 +38,17 @@
       font-size: 36px;
     }
 
-    .sec-text:before {
-      content: "";
-      position: absolute;
-      top: -1px;
-      left: 0;
-      height: 100%;
-      width: 100%;
-
-      background-color: var(--background);
-      border-left: 2px solid var(--pointcolor);
-
-      animation: animate 2.5s steps(4) infinite;
+    .cursor {
+      position: relative;
+      bottom: 6px;
+      border-left: 3px solid var(--maincolor);
+      animation: blink 1s step-start infinite;
+      margin-left: 3px;
     }
 
-    @keyframes animate {
-      30%,
-      70% {
-        left: 100%;
-      }
-
-      100% {
-        left: 0%;
+    @keyframes blink {
+      50% {
+        opacity: 0;
       }
     }
   }

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Gnb from "./_components/gnb";
-import "./globals.scss";
+import "./styles/globals.scss";
 
 export const metadata: Metadata = {
   title: "박태환 portfolio",

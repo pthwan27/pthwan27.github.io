@@ -1,6 +1,11 @@
-@import "./fonts/font.scss";
-@import "./styles/gnb.scss";
-@import "./styles/home.scss";
+@import "../fonts/font.scss";
+
+/*componet*/
+@import "./component/gnb.scss";
+@import "./component/overlay.scss";
+
+/*conatiner*/
+@import "../_container/home/home.scss";
 
 :root {
   --background: #dafcd5;
@@ -17,8 +22,6 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: SBAggroB;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
