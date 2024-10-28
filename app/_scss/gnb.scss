@@ -1,0 +1,93 @@
+@media (min-width: 1024px) {
+  .gnb-light {
+    background: transparent !important;
+    transition: background-color 1s;
+  }
+}
+// @media (max-width: 1023px) {
+//   .gnb {
+//     background: var(--foreground);
+//     transition: background-color 1s;
+//   }
+
+//   .gnb-container__brand {
+//     color: var(--white);
+//   }
+// }
+
+.gnb {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 1;
+
+  text-align: center;
+
+  width: 100%;
+  height: 80px;
+
+  padding: 0 15px 0 15px;
+}
+
+.gnb-container {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  &__brand {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    font-size: 28px;
+  }
+  &__navbar {
+    font-size: 16px;
+
+    display: flex;
+    flex-wrap: nowrap;
+
+    li {
+      margin: 24px 8px 20px 20px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__dropdown-menu {
+    flex-basis: 100%;
+  }
+
+  .visible {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+
+  .hidden {
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+  }
+}
+.gnb-container__dropdown-menu {
+  visibility: hidden;
+}
+
+.dropdown_button {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+  padding: 8px;
+}
+
+.gnb-container__navbar li.active a,
+.gnb-container__dropdown-menu li.active a {
+  text-decoration: var(--secondColor) underline;
+  text-underline-position: under;
+
+  /* 또는 원하는 스타일로 변경 */
+}

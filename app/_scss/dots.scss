@@ -1,0 +1,48 @@
+.dots-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+
+  width: 20px;
+  background-color: aqua;
+
+  &-bg {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  &-items {
+    display: flex;
+    flex-direction: column;
+    height: 100;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.dot-item-container {
+  width: 15px;
+  height: 15px;
+  background-color: brown;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 9999;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dot-item-container.selected {
+  border: 1px solid white;
+}
+
+.dot-item-inner {
+  position: relative;
+  width: 11;
+  height: 11;
+  border-radius: 9999;
+  background-color: white;
+  cursor: pointer;
+}

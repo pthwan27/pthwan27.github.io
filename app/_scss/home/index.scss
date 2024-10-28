@@ -1,10 +1,14 @@
+@import "./overlay.scss";
+
 .home-container {
+  position: relative;
+  overflow: hidden;
+
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 
-  min-height: 100vh;
   overflow: hidden;
   &__name {
     text-align: center;
@@ -36,12 +40,15 @@
     }
     .sec-text {
       font-size: 36px;
+      color: var(--maincolor);
+      text-decoration: var(--secondColor) underline;
+      text-underline-position: under;
     }
 
     .cursor {
       position: relative;
       bottom: 6px;
-      border-left: 3px solid var(--maincolor);
+      border-left: 3px solid var(--foreground);
       animation: blink 1s step-start infinite;
       margin-left: 3px;
     }

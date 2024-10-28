@@ -1,3 +1,3 @@
-const overlay = () => <div className="overlay"></div>;
+const Overlay = () => <div className="overlay-left"></div>;
 
-export default overlay;
+export default Overlay;
