@@ -36,7 +36,7 @@ const useTypingText = (texts: string[], typingSpeed: number, deletingSpeed: numb
     }, speed);
 
     return () => clearTimeout(handleTyping); // 클린업 타이머
-  }, [charIndex, isDeleting, texts, currentTextIndex, typingSpeed]);
+  }, [charIndex, isDeleting, texts, currentTextIndex, typingSpeed, deletingSpeed]);
 
   return displayText;
 };

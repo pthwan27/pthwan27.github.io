@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import useWindowSizeCustom from "../_hooks/useWindowSizeCustom";
 import { useEffect, useState } from "react";
 
