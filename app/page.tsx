@@ -17,9 +17,13 @@ const MainPage = () => {
     setCurrentPage(newPage);
   };
 
+  const handleLinkClick = (index: number) => {
+    setCurrentPage(index);
+  };
+
   return (
     <>
-      <Gnb currentPage={currentPage} />
+      <Gnb currentPage={currentPage} onLinkClick={handleLinkClick} />
       <FullPageScrollContainer
         onPageChange={handlePageChange}
         currentPage={currentPage}

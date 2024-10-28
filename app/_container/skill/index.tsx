@@ -1,5 +1,5 @@
 const SkillContainer = () => {
-  return <div></div>;
+  return <div className="skill-container section">Skill</div>;
 };
 
 export default SkillContainer;
