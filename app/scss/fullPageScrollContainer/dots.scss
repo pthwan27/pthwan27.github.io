@@ -1,11 +1,10 @@
 .dots-container {
   position: fixed;
   top: 0;
-  right: 0;
+  right: 16px;
   height: 100%;
 
-  width: 20px;
-  background-color: aqua;
+  background-color: transparent;
 
   &-bg {
     position: relative;
@@ -23,26 +22,29 @@
     justify-content: center;
   }
 }
+
 .dot-item-container {
-  width: 15px;
-  height: 15px;
-  background-color: brown;
-  border: 1px solid rgba(0, 0, 0, 0);
-  border-radius: 9999;
-  margin: 10px 0;
+  width: 10px;
+  height: 10px;
+
+  margin: 4px 0px;
+
+  background: var(--foreground);
+  opacity: 0.2;
+
+  border-radius: 99px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .dot-item-container.selected {
-  border: 1px solid white;
+  opacity: 0.5;
+  background: var(--mainColor);
 }
 
 .dot-item-inner {
   position: relative;
-  width: 11;
-  height: 11;
-  border-radius: 9999;
-  background-color: white;
+  border-radius: 99px;
+  background: var(--pointColor);
   cursor: pointer;
 }

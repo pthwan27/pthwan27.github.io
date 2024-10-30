@@ -85,6 +85,7 @@ const FullPageScrollContainer: React.FC<TfullPageScroll> = ({
     },
     [scrollDown, scrollUp]
   );
+
   useEffect(() => {
     scrollTo(currentPage);
   }, [currentPage, scrollTo]);

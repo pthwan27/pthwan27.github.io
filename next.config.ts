@@ -9,10 +9,12 @@ const nextConfig: NextConfig = {
   output: "export",
   reactStrictMode: true,
   images: {
-    unoptimized: true, // Disable default image optimization
+    unoptimized: true,
   },
   assetPrefix: isProd ? `/${repoName}/` : "",
-  // basePath: isProd ? `/${repoName}` : "",
+  sassOptions: {
+    silenceDeprecations: ["legacy-js-api"],
+  },
 };
 
-module.exports = nextConfig;
+export default nextConfig;

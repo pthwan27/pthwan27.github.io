@@ -1,6 +1,6 @@
-@import "@/app/scss/index.scss";
-@import "@/app/_fonts/font.scss";
-@import "@/app/styles/animation.scss";
+@use "../scss/index.scss";
+@use "../fonts/font.scss";
+@use "animation.scss";
 
 :root {
   --white: #edede9;
@@ -9,10 +9,10 @@
   --background: #3bd42721; // 사용 아직 없음
 
   --foreground: #171717;
-  --maincolor: #3bd427;
+  --mainColor: #3bd427;
   --secondColor: #9cb4d4;
 
-  --pointcolor: #50d8e2; // 미정
+  --pointColor: #50d8e2; // 미정
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,11 +33,11 @@ body {
   padding: 0;
   margin: 0;
 }
-
 a {
   color: inherit;
   text-decoration: none;
 }
+
 ul,
 li {
   list-style: none;

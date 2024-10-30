@@ -1,8 +1,9 @@
-@import "./home/index.scss";
-@import "./about/index.scss";
-@import "./project/index.scss";
-@import "./skill/index.scss";
-@import "./contact/index.scss";
+@forward "./fullPageScrollContainer/index.scss";
 
-@import "./gnb.scss";
-@import "./fullPageScrollContainer.scss";
+@forward "./home/index.scss";
+@forward "./about/index.scss";
+@forward "./project/index.scss";
+@forward "./skill/index.scss";
+@forward "./contact/index.scss";
+
+@forward "./gnb.scss";

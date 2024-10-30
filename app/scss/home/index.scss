@@ -1,4 +1,4 @@
-@import "./overlay.scss";
+@forward "./overlay.scss";
 
 .home-container {
   position: relative;
@@ -14,7 +14,7 @@
     text-align: center;
 
     .first-text {
-      color: var(--maincolor);
+      color: var(--mainColor);
       font-size: 16px;
       letter-spacing: 4px;
     }
@@ -30,7 +30,7 @@
     position: relative;
     font-size: 32px;
 
-    color: var(--maincolor);
+    color: var(--mainColor);
     .text {
       position: relative;
     }
@@ -40,7 +40,7 @@
     }
     .sec-text {
       font-size: 36px;
-      color: var(--maincolor);
+      color: var(--mainColor);
       text-decoration: var(--secondColor) underline;
       text-underline-position: under;
     }
