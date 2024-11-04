@@ -24,29 +24,40 @@
 }
 
 .dot-item-container {
-  width: 10px;
-  height: 10px;
+  width: 24px;
+  height: 24px;
 
-  margin: 4px 0px;
-
-  background: var(--foreground);
-  opacity: 0.2;
-
-  border-radius: 99px;
+  margin: 6px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  cursor: pointer;
 }
 .dot-item-container.selected {
-  opacity: 0.5;
-  background: var(--mainColor);
+  transition: transform 0.35s;
+  transform: scale(1.3);
 }
 
 .dot-item-inner {
   position: relative;
-  border-radius: 99px;
-  background: var(--pointColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+}
+.dot-item-inner > img {
+  z-index: 1;
+}
+.dot-item-inner > div {
+  position: absolute;
+  bottom: -4px;
+  background: transparent;
+  transition: background 0.5s ease-in-out;
+}
+
+.dot-item-inner > div.selected {
+  height: 10px;
+  width: 24px;
+
+  background-color: var(--mainColor);
+  opacity: 0.2;
 }

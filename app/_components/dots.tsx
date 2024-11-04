@@ -27,9 +27,10 @@ const Dot: React.FC<TDot> = ({ menu, index, currentIdx, onClick }) => {
       className={`dot-item-container ${selected ? "selected" : ""}`}
       onClick={() => onClick(index)}
     >
-      <div className="dot-itme-inner">
+      <span className={`dot-item-inner ${selected ? "selected" : ""}`}>
+        <div className={selected ? "selected" : ""}></div>
         <Image src={`/icons/icon-${menu}.png`} width={20} height={20} alt="" />
-      </div>
+      </span>
     </div>
   );
 };
