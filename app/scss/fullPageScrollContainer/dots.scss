@@ -36,6 +36,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  cursor: pointer;
 }
 .dot-item-container.selected {
   opacity: 0.5;

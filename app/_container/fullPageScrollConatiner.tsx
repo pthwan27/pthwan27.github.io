@@ -1,8 +1,8 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { TfullPageScroll } from "../types";
-import Dots from "../_components/dots";
+import { TfullPageScroll } from "@/app/types";
+import Dots from "@/app/_components/dots";
 
 const FullPageScrollContainer: React.FC<TfullPageScroll> = ({
   children,
@@ -12,6 +12,7 @@ const FullPageScrollContainer: React.FC<TfullPageScroll> = ({
   setCurrentPage,
 }) => {
   const outerDivRef = useRef<HTMLDivElement>(null);
+  const [menus, setMenus] = useState<string[]>([]);
 
   const canScrollRef = useRef<boolean>(true);
   const [childCnt, setChildCnt] = useState<number>(0);
@@ -113,16 +114,21 @@ const FullPageScrollContainer: React.FC<TfullPageScroll> = ({
     };
   }, [wheelHandler, scrollHandler, touchHandler, onLoad]);
 
-  const movePageTo = useCallback(
-    (index: number) => {
-      if (index > currentPage) {
-        for (let i = 0; i < index - currentPage; i++) scrollDown();
-      } else if (index < currentPage) {
-        for (let i = 0; i < currentPage - index; i++) scrollUp();
-      }
-    },
-    [currentPage, scrollDown, scrollUp]
-  );
+  useEffect(() => {
+    const menus: string[] = [];
+
+    if (!outerDivRef.current) return;
+
+    Array.from(outerDivRef.current.children).forEach((e) => {
+      menus.push(e.classList[0].split("-")[0]);
+    });
+
+    setMenus(menus);
+  }, []);
+  const movePageTo = (index: number) => {
+    setCurrentPage(index);
+    onPageChange(index);
+  };
 
   return (
     <>
@@ -130,11 +136,7 @@ const FullPageScrollContainer: React.FC<TfullPageScroll> = ({
         {children}
       </div>
 
-      <Dots
-        limit={outerDivRef.current?.childElementCount || 0}
-        currentIdx={currentPage}
-        onDotClick={movePageTo}
-      />
+      <Dots menus={menus} currentIdx={currentPage} onDotClick={movePageTo} />
     </>
   );
 };

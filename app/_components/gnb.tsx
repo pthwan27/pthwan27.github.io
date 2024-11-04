@@ -1,7 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import useWindowSizeCustom from "../_hooks/useWindowSizeCustom";
 import { useEffect, useState } from "react";
+import useMousePositionDebounce from "../_hooks/useMousePositionDebounce";
 
 const Gnb = ({
   currentPage,
@@ -12,20 +14,16 @@ const Gnb = ({
 }) => {
   const menuItems = ["about", "project", "skill", "contact"];
 
+  const [isShowGnb, setIsShowGnb] = useState(false);
   const [isDropdown, setIsDropdown] = useState(true);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [, setIsVisibilityAnimation] = useState(false);
 
   const handleLinkClick = (index: number, e: React.MouseEvent) => {
     e.preventDefault();
     onLinkClick(index);
   };
 
-  const toggleMenu = () => {
-    setIsDropdownOpen((prev) => !prev);
-  };
-
   const { width } = useWindowSizeCustom();
+  const mouseY = useMousePositionDebounce(100);
 
   useEffect(() => {
     if (width && width < 1024) {
@@ -37,19 +35,20 @@ const Gnb = ({
   }, [width]);
 
   useEffect(() => {
-    if (isDropdownOpen) {
-      setIsVisibilityAnimation(true);
+    if (mouseY !== null && (mouseY <= 50 || currentPage === 0)) {
+      setIsShowGnb(true);
     } else {
-      const timer = setTimeout(() => setIsVisibilityAnimation(false), 1000);
-      return () => clearTimeout(timer);
+      setIsShowGnb(false);
     }
-  }, [isDropdownOpen]);
+  }, [mouseY, currentPage]);
 
   return (
     <nav className="gnb gnb-light">
-      <div className="gnb-container">
-        <a href="" onClick={(e) => handleLinkClick(0, e)} className="gnb-container__brand">
-          pthwan27
+      <div className={`gnb-container ${isShowGnb ? "" : "invisible"}`}>
+        <a href="" className="gnb-container__brand" onClick={(e) => handleLinkClick(0, e)}>
+          <span className="profile">
+            <Image width={80} height={80} quality={100} src="/images/profile2.jpg" alt="" />
+          </span>
         </a>
         <ul
           className={`gnb-container__navbar
@@ -63,25 +62,6 @@ const Gnb = ({
             </li>
           ))}
         </ul>
-
-        <button
-          className={`${isDropdown ? "hidden" : "visible"} gnb-container__navbar dropdown_button`}
-          onClick={toggleMenu}
-        >
-          Menu
-        </button>
-
-        <div className="gnb-container__dropdown-menu">
-          <ul>
-            {menuItems.map((menu, idx) => (
-              <li key={menu + idx} className={currentPage === idx + 1 ? "active" : ""}>
-                <a href={`#${menu}`} onClick={(e) => handleLinkClick(idx + 1, e)}>
-                  {menu}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
       </div>
     </nav>
   );

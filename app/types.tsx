@@ -8,13 +8,14 @@ export type TfullPageScroll = {
 } & PropsWithChildren;
 
 export type TDot = {
+  menu: string;
   index: number;
   currentIdx: number;
   onClick: (idx: number) => void;
 };
 
 export type TDots = {
-  limit: number;
+  menus: string[];
   currentIdx: number;
   onDotClick: (idx: number) => void;
 };
