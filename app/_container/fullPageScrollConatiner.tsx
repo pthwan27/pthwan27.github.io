@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { TfullPageScroll } from "@/app/types";
+import { TfullPageScroll } from "@/app/_types/types";
 import Dots from "@/app/_components/dots";
 
 const FullPageScrollContainer: React.FC<TfullPageScroll> = ({
