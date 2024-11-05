@@ -6,7 +6,11 @@ import useTypingText from "@/app/_hooks/useTypingText";
 
 const HomeContainer = () => {
   const name = "박태환";
-  const descText = useTypingText(["개발자 A", "개발자 B", "생각을 표현하는"], 1500, 700);
+  const descText = useTypingText(
+    ["사용자의 입장에서 생각하는", "생각을 표현하는", "프론트엔드 개발자입니다."],
+    1500,
+    700
+  );
 
   return (
     <div className="home-container section">

@@ -17,6 +17,8 @@ const Gnb = ({
   const [isShowGnb, setIsShowGnb] = useState(false);
   const [isDropdown, setIsDropdown] = useState(true);
 
+  const HomeImage = "/images/profile.jpg";
+
   const handleLinkClick = (index: number, e: React.MouseEvent) => {
     e.preventDefault();
     onLinkClick(index);
@@ -46,8 +48,8 @@ const Gnb = ({
     <nav className="gnb gnb-light">
       <div className={`gnb-container ${isShowGnb ? "" : "invisible"}`}>
         <a href="" className="gnb-container__brand" onClick={(e) => handleLinkClick(0, e)}>
-          <span className="profile">
-            <Image width={80} height={80} quality={100} src="/images/profile2.jpg" alt="" />
+          <span className="about">
+            <Image width={80} height={80} quality={100} src={HomeImage} alt="" />
           </span>
         </a>
         <ul

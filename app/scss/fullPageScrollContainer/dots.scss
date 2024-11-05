@@ -55,9 +55,9 @@
 }
 
 .dot-item-inner > div.selected {
-  height: 10px;
+  height: 12px;
   width: 24px;
 
-  background-color: var(--mainColor);
-  opacity: 0.2;
+  background-color: var(--foreground);
+  opacity: 0.3;
 }

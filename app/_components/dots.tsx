@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { TDot, TDots } from "../types";
+import { TDot, TDots } from "../_types/types";
 
 const Dots: React.FC<TDots> = ({ menus, currentIdx, onDotClick }) => {
   return (
@@ -29,7 +29,7 @@ const Dot: React.FC<TDot> = ({ menu, index, currentIdx, onClick }) => {
     >
       <span className={`dot-item-inner ${selected ? "selected" : ""}`}>
         <div className={selected ? "selected" : ""}></div>
-        <Image src={`/icons/icon-${menu}.png`} width={20} height={20} alt="" />
+        <Image src={`/icons/${menu}.svg`} width={20} height={20} alt="" />
       </span>
     </div>
   );

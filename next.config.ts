@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
   output: "export",
   reactStrictMode: true,
   images: {
+    domains: ["picsum.photos"],
     unoptimized: true,
   },
   assetPrefix: isProd ? `/${repoName}/` : "",
