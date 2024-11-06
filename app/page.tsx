@@ -8,6 +8,7 @@ import Gnb from "@/app/_components/gnb";
 import ProjectContainer from "@/app/_container/project";
 import SkillContainer from "@/app/_container/skill";
 import ContactContainer from "@/app/_container/contact";
+import AnimatedLogoSvg from "./_components/animatedLogoSvg";
 
 const MainPage = () => {
   const [currentPage, setCurrentPage] = useState<number>(0);
@@ -34,6 +35,9 @@ const MainPage = () => {
         <SkillContainer />
         <ContactContainer />
       </FullPageScrollContainer>
+      <div className="svg-container">
+        <AnimatedLogoSvg currentPage={currentPage} />
+      </div>
     </div>
   );
 };

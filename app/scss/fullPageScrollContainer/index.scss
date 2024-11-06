@@ -10,3 +10,21 @@
   width: 100%;
   overflow-y: hidden;
 }
+
+.svg-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.svg-container svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+}

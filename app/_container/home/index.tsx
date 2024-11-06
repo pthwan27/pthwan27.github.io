@@ -1,7 +1,7 @@
 "use client";
 import IntroDesc from "@/app/_components/home/introDesc";
 import IntroName from "@/app/_components/home/introName";
-import Overlay from "@/app/_components/home/overlay";
+// import Overlay from "@/app/_components/home/overlay";
 import useTypingText from "@/app/_hooks/useTypingText";
 
 const HomeContainer = () => {
@@ -16,7 +16,7 @@ const HomeContainer = () => {
     <div className="home-container section">
       <IntroName name={name} />
       <IntroDesc descText={descText} />
-      <Overlay />
+      {/* <Overlay /> */}
     </div>
   );
 };

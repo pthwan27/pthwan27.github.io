@@ -17,7 +17,7 @@ const Gnb = ({
   const [isShowGnb, setIsShowGnb] = useState(false);
   const [isDropdown, setIsDropdown] = useState(true);
 
-  const HomeImage = "/images/profile.jpg";
+  const HomeImage = "/images/profile.png";
 
   const handleLinkClick = (index: number, e: React.MouseEvent) => {
     e.preventDefault();
@@ -29,8 +29,6 @@ const Gnb = ({
 
   useEffect(() => {
     if (width && width < 1024) {
-      // setIsDropdown(false);
-      // setIsDropdownOpen(false);
     } else {
       setIsDropdown(true);
     }
@@ -46,7 +44,7 @@ const Gnb = ({
 
   return (
     <nav className="gnb gnb-light">
-      <div className={`gnb-container ${isShowGnb ? "" : "invisible"}`}>
+      <div className={`gnb-container ${isShowGnb ? "visible" : "invisible"}`}>
         <a href="" className="gnb-container__brand" onClick={(e) => handleLinkClick(0, e)}>
           <span className="about">
             <Image width={80} height={80} quality={100} src={HomeImage} alt="" />
