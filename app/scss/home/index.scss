@@ -41,8 +41,8 @@
     .sec-text {
       font-size: 36px;
       color: var(--mainColor);
-      text-decoration: var(--secondColor) underline;
-      text-underline-position: under;
+      // text-decoration: var(--foreground) underline;
+      // text-underline-position: under;
     }
 
     .cursor {

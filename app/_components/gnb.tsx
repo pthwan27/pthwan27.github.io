@@ -29,6 +29,8 @@ const Gnb = ({
 
   useEffect(() => {
     if (width && width < 1024) {
+      // setIsDropdown(false);
+      // setIsDropdownOpen(false);
     } else {
       setIsDropdown(true);
     }
