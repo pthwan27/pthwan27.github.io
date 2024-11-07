@@ -9,7 +9,6 @@
 
       background-color: transparent;
       border-radius: 99px;
-      border: solid 2px var(--foreground);
 
       img {
         margin: auto;
@@ -28,7 +27,7 @@
       }
       div {
         border-radius: 20px;
-        background-color: blue;
+        background-color: var(--firstColor);
         font-size: 12px;
         text-align: center;
       }
@@ -53,6 +52,10 @@
   }
 
   &__desc {
+    @media (max-width: 768px) {
+      display: none;
+    }
+
     position: relative;
 
     color: var(--mainColor);
