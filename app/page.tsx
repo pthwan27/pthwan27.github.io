@@ -3,7 +3,7 @@
 import { useState } from "react";
 import FullPageScrollContainer from "@/app/_container/fullPageScrollConatiner";
 import Gnb from "@/app/_components/gnb";
-import AboutContainer from "@/app/_container/about/index";
+import AboutContainer from "@/app/_container/about";
 import ProjectContainer from "@/app/_container/project";
 import SkillContainer from "@/app/_container/skill";
 import ContactContainer from "@/app/_container/contact";
