@@ -1,5 +1,5 @@
 import Image from "next/image";
-import GithubIcon from "@/app/assets/icons/github-mark.svg";
+// import GithubIcon from "@/app/assets/icons/github-mark.svg";
 const ProfileImage = "/images/profile.png";
 
 const Profile = () => {
@@ -18,13 +18,13 @@ const Profile = () => {
       <div className="tag">
         <a href="pthwan27.github.io">
           pthwan27
-          <GithubIcon
+          {/* <GithubIcon
             width="20"
             height="20"
             viewBox="-10 0 120 120"
             fill="black"
             preserveAspectRatio="xMidYMin slice"
-          />
+          /> */}
         </a>
         <div>Frontend</div>
       </div>
