@@ -2,9 +2,8 @@
 
 import { useState } from "react";
 import FullPageScrollContainer from "@/app/_container/fullPageScrollConatiner";
-import HomeContainer from "@/app/_container/home/index";
-import AboutContainer from "@/app/_container/about";
 import Gnb from "@/app/_components/gnb";
+import AboutContainer from "@/app/_container/about/index";
 import ProjectContainer from "@/app/_container/project";
 import SkillContainer from "@/app/_container/skill";
 import ContactContainer from "@/app/_container/contact";
@@ -29,7 +28,6 @@ const MainPage = () => {
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
       >
-        <HomeContainer />
         <AboutContainer />
         <ProjectContainer />
         <SkillContainer />

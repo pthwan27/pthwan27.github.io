@@ -1,0 +1,90 @@
+.intro {
+  &__profile {
+    display: flex;
+    flex-direction: column;
+
+    .cover {
+      overflow: hidden;
+      display: flex;
+
+      background-color: transparent;
+      border-radius: 99px;
+      border: solid 2px var(--foreground);
+
+      img {
+        margin: auto;
+      }
+    }
+    .tag {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      :first-child {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+      }
+      div {
+        border-radius: 20px;
+        background-color: blue;
+        font-size: 12px;
+        text-align: center;
+      }
+    }
+  }
+  &__name {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+
+    .first-text {
+      color: var(--foreground);
+
+      font-size: 24px;
+    }
+
+    .sec-text {
+      color: var(--foreground);
+      margin-top: 4px;
+      font-size: 24px;
+    }
+  }
+
+  &__desc {
+    position: relative;
+
+    color: var(--mainColor);
+    .text {
+      position: relative;
+    }
+
+    .first-text {
+      color: var(--foreground);
+    }
+    .sec-text {
+      font-size: 32px;
+      color: var(--mainColor);
+      // text-decoration: var(--foreground) underline;
+      // text-underline-position: under;
+      :last-child {
+        color: var(--foreground);
+      }
+    }
+
+    .cursor {
+      position: relative;
+      bottom: 6px;
+      border-left: 3px solid var(--foreground);
+      animation: blink 1s step-start infinite;
+      margin-left: 3px;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+  }
+}

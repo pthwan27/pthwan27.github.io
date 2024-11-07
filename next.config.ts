@@ -8,6 +8,15 @@ const repoName = "pthwan27.github.io";
 const nextConfig: NextConfig = {
   output: "export",
   reactStrictMode: true,
+
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ["@svgr/webpack"],
+    });
+    return config;
+  },
+
   images: {
     domains: ["picsum.photos"],
     unoptimized: true,
