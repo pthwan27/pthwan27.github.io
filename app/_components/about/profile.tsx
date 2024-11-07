@@ -17,7 +17,7 @@ const Profile = () => {
         />
       </div>
       <div className="tag">
-        <a href="pthwan27.github.io">
+        <a href="https://github.com/pthwan27">
           pthwan27
           <GithubMark />
           {/* <GithubIcon
