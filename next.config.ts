@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
   output: "export",
   reactStrictMode: true,
 
-  webpack: (config) => {
+  webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
       use: ["@svgr/webpack"],
