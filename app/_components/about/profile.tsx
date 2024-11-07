@@ -1,6 +1,5 @@
 import Image from "next/image";
-import GithubIcon from "../../assets/icons/github-mark.svg";
-
+import GithubIcon from "@/app/assets/icons/github-mark.svg";
 const ProfileImage = "/images/profile.png";
 
 const Profile = () => {
