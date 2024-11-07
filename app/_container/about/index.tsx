@@ -1,4 +1,5 @@
 "use client";
+
 import IntroDesc from "@/app/_components/about/introDesc";
 import Profile from "@/app/_components/about/profile";
 import useTypingText from "@/app/_hooks/useTypingText";
