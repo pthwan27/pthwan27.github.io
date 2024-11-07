@@ -1,3 +1,4 @@
+import GithubMark from "@/app/assets/icons/github-mark";
 import Image from "next/image";
 // import GithubIcon from "@/app/assets/icons/github-mark.svg";
 const ProfileImage = "/images/profile.png";
@@ -18,6 +19,7 @@ const Profile = () => {
       <div className="tag">
         <a href="pthwan27.github.io">
           pthwan27
+          <GithubMark />
           {/* <GithubIcon
             width="20"
             height="20"
