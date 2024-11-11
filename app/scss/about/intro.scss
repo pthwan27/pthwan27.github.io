@@ -8,7 +8,6 @@
       display: flex;
 
       background-color: transparent;
-      border-radius: 99px;
 
       img {
         margin: auto;
@@ -26,9 +25,9 @@
         font-size: 12px;
       }
       div {
-        border-radius: 20px;
+        font-style: italic;
         background-color: var(--firstColor);
-        font-size: 12px;
+        font-size: 10px;
         text-align: center;
       }
     }
@@ -52,13 +51,11 @@
   }
 
   &__desc {
+    position: relative;
+    color: var(--mainColor);
     @media (max-width: 768px) {
       display: none;
     }
-
-    position: relative;
-
-    color: var(--mainColor);
     .text {
       position: relative;
     }

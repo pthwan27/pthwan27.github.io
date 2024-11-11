@@ -1,5 +1,5 @@
 const ProjectContainer = () => {
-  return <div className="project-container section">Project</div>;
+  return <div className="project-container section"></div>;
 };
 
 export default ProjectContainer;

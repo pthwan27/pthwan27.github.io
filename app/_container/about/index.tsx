@@ -23,7 +23,7 @@ const AboutContainer = () => {
           </div>
         </div>
       </div>
-      <div className="about-container__about-me"></div>
+      <div className="about-container__about-me shadow-box"></div>
     </div>
   );
 };

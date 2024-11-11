@@ -5,7 +5,7 @@ const ProfileImage = "/images/profile.jpg";
 const Profile = () => {
   return (
     <div className="intro__profile pl-20 pb-20">
-      <div className="cover">
+      <div className="cover br-full">
         <Image
           src={ProfileImage}
           width={120}
@@ -20,7 +20,7 @@ const Profile = () => {
           pthwan27
           <GithubMark />
         </a>
-        <div>Frontend</div>
+        <div className="aggroL br-20 py-2">Frontend</div>
       </div>
     </div>
   );
