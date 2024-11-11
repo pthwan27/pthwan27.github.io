@@ -43,6 +43,13 @@
       font-size: 24px;
     }
 
+    @media (max-width: 768px) {
+      .sec-text::before {
+        content: "Frontend ";
+        font-size: 20px;
+        color: var(--mainColor);
+      }
+    }
     .sec-text {
       color: var(--foreground);
       margin-top: 4px;
