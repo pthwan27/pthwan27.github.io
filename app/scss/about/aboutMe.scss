@@ -5,38 +5,44 @@
 
   &_intro {
     :nth-child(1) {
-      flex: 3 1 auto;
+      flex: 3 5 70%;
     }
     :nth-child(2) {
-      flex: 1 1 auto;
+      flex: 3 5 30%;
+    }
+  }
+
+  &_info {
+    :first-child {
+      flex: 3 5 100%;
     }
   }
 
   &_fe-stack {
     :first-child {
-      flex: 1 1 auto;
+      flex: 3 5 100%;
     }
   }
 
   &_etc-stack {
     :first-child {
-      flex: 1 1 auto;
+      flex: 3 5 100%;
     }
   }
 }
 .divider {
+  margin-bottom: 4px;
   border-top-color: rgba(0, 0, 0, 0.06);
   white-space: nowrap;
-  text-align: center;
 
   &-items {
-    width: 10%;
     display: inline-block;
   }
 }
 .divider::before {
   position: relative;
   top: 50%;
+  min-width: 5%;
   width: 5%;
   border-top: 1px solid transparent;
   border-top-color: transparent;
