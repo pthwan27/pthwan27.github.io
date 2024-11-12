@@ -20,6 +20,15 @@
 .grid {
   display: grid;
 }
+.table {
+  display: table;
+}
+.row {
+  flex-direction: row;
+}
+.column {
+  flex-direction: column;
+}
 
 .block {
   display: block;
@@ -43,6 +52,9 @@
 .p-4 {
   padding: 4px;
 }
+.p-12 {
+  padding: 12px;
+}
 
 .px-2 {
   padding-right: 2px;
@@ -59,6 +71,15 @@
 .py-4 {
   padding-top: 4px;
   padding-bottom: 4px;
+}
+
+.px-12 {
+  padding-right: 12px;
+  padding-left: 12px;
+}
+.py-12 {
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .pr-20 {
