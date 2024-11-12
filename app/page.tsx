@@ -21,7 +21,7 @@ const MainPage = () => {
   };
 
   return (
-    <div>
+    <div className="pBlack">
       <Gnb currentPage={currentPage} onLinkClick={handleLinkClick} />
       <FullPageScrollContainer
         onPageChange={handlePageChange}

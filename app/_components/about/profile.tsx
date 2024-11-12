@@ -20,7 +20,7 @@ const Profile = () => {
           pthwan27
           <GithubMark />
         </a>
-        <div className="aggroL br-20 py-2">Frontend</div>
+        <div className="pLight br-20 py-2">Frontend</div>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 const Tags = ({ skills }: { skills: string[] }) => {
   return (
-    <ul className="aggroL">
+    <ul className="pLight">
       {skills.map((e, idx) => {
         return <li key={idx}> #{e}</li>;
       })}

@@ -1,35 +1,84 @@
 @font-face {
-  font-family: "SBAggroB";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff")
+  font-family: "PretendardThin";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff")
     format("woff");
-  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PretendardExtraLight";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraLight.woff")
+    format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "PretendardLight";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
+    format("woff");
   font-style: normal;
 }
 
 @font-face {
-  font-family: "SBAggroM";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroM.woff")
+  font-family: "PretendardRegular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
     format("woff");
-  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PretendardMedium";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff")
+    format("woff");
   font-style: normal;
 }
 
 @font-face {
-  font-family: "SBAggroL";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroL.woff")
+  font-family: "PretendardSemiBold";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff")
     format("woff");
-  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PretendardBold";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
+    format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "PretendardExtraBold";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff")
+    format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "PretendardBlack";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff")
+    format("woff");
   font-style: normal;
 }
 
-.aggroB {
-  font-family: SBAggroB;
+.pThin {
+  font-family: PretendardThin;
 }
-
-.aggroM {
-  font-family: SBAggroM;
+.pExtraThin {
+  font-family: PretendardExtraLight;
 }
-
-.aggroL {
-  font-family: SBAggroL;
+.pLight {
+  font-family: PretendardLight;
+}
+.pRegular {
+  font-family: PretendardRegular;
+}
+.pMedium {
+  font-family: PretendardMedium;
+}
+.pSemiBold {
+  font-family: PretendardSemiBold;
+}
+.pBold {
+  font-family: PretendardBold;
+}
+.pExtraBold {
+  font-family: PretendardExtraBold;
+}
+.pBlack {
+  font-family: PretendardBlack;
 }

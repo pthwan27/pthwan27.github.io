@@ -9,7 +9,7 @@ const AboutMe = () => {
       <div className="desc_intro flex row wrap">
         <div className="introduce px-12 py-4">
           <Divider title="introduce" />
-          <span className="aggroL">
+          <span className="pRegular">
             자기소개 문구자기소개 문구자기소개 문구자기소개 문구자기소개 문구자기소개 문구
           </span>
         </div>
@@ -27,7 +27,7 @@ const AboutMe = () => {
 
       <div className="desc_etc-stack flex row">
         <div className="etc-stack px-12 py-4">
-          <Divider title="etc Stack" />
+          <Divider title="Etc Stack" />
         </div>
       </div>
     </div>
