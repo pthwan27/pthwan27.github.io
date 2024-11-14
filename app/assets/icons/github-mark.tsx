@@ -3,7 +3,7 @@ const GithubMark = () => {
     <svg
       width="20"
       height="20"
-      viewBox="-10 0 120 120"
+      viewBox="-10 -10 120 120"
       fill="black"
       preserveAspectRatio="xMidYMin slice"
       xmlns="http://www.w3.org/2000/svg"

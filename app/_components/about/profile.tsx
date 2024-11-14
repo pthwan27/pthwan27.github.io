@@ -16,11 +16,11 @@ const Profile = () => {
         />
       </div>
       <div className="tag">
-        <a href="https://github.com/pthwan27">
+        <a className="center py-2" href="https://github.com/pthwan27">
           pthwan27
           <GithubMark />
         </a>
-        <div className="pLight br-20 py-2">Frontend</div>
+        <div className="pExtraThin br-20 py-2">Frontend</div>
       </div>
     </div>
   );

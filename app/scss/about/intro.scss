@@ -18,16 +18,9 @@
       flex-direction: column;
       justify-content: center;
 
-      :first-child {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 12px;
-      }
       div {
         font-style: italic;
         background-color: var(--firstColor);
-        font-size: 10px;
         text-align: center;
       }
     }

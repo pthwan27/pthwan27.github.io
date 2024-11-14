@@ -1,16 +1,16 @@
 const Tags = ({ skills }: { skills: string[] }) => {
   return (
-    <ul className="pExtraThin py-8">
+    <span className="py-8">
       {skills.map((e, idx) => {
         return (
-          <li key={idx}>
+          <span key={idx}>
             {" "}
-            <span className="pMedium"># </span>
+            <span className="">#</span>
             {e}
-          </li>
+          </span>
         );
       })}
-    </ul>
+    </span>
   );
 };
 export default Tags;

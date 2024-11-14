@@ -1,8 +1,8 @@
-import Divider from "./deivider";
+import Divider from "./divider";
 import Tags from "./tags";
 
 const AboutMe = () => {
-  const skills = ["react", "javascript", "typescript"];
+  const skills = ["React", "Javascript", "Typescript"];
   const introduce = (
     <>
       프로그래밍이라는 수단을 통해 생각을 표현하고
@@ -21,18 +21,18 @@ const AboutMe = () => {
   );
 
   return (
-    <div className="desc flex column">
+    <div className="desc flex column pLight">
       <div className="desc_intro flex row wrap">
         <div className="introduce pl-12 py-4">
-          <Divider title="introduce" />
+          <Divider title="INTRODUCE" />
           <div className="py-8 px-16">
-            <span className="text-24 pExtraThin">{introduce}</span>
+            <span className="text-24">{introduce}</span>
           </div>
         </div>
 
         <div className="tag pl-12 py-4">
-          <Divider title="tag" />
-          <div className="px-16">
+          <Divider title="TAGS" />
+          <div className="py-8 px-16">
             <Tags skills={skills} />
           </div>
         </div>
@@ -40,7 +40,7 @@ const AboutMe = () => {
 
       <div className="desc_info flex row">
         <div className="info pl-12 py-4">
-          <Divider title="info" />
+          <Divider title="INFO" />
         </div>
       </div>
 

@@ -24,7 +24,7 @@ const AboutContainer = () => {
           </div>
         </div>
       </div>
-      <div className="about-container__about-me shadow-box br-12 p-12">
+      <div className="about-container__about-me shadow-box br-12 px-12 py-24">
         <AboutMe />
       </div>
     </div>
