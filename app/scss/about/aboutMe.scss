@@ -4,6 +4,8 @@
   height: 100%;
   color: var(--foreground);
 
+  overflow: scroll;
+
   &_intro {
     :nth-child(1) {
       flex: 1 99 70%;
@@ -18,13 +20,19 @@
   }
 
   &_info {
-    :first-child {
-      flex: 1 999 100%;
+    > :nth-child(1) {
+      flex: 1 99 30%;
+    }
+    > :nth-child(2) {
+      flex: 1 99 30%;
+    }
+    > :nth-child(3) {
+      flex: 1 99 30%;
     }
   }
 
   &_fe-stack {
-    :first-child {
+    > :nth-child(1) {
       flex: 1 99 100%;
     }
   }

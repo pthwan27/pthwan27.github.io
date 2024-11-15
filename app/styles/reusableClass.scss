@@ -42,6 +42,27 @@
 }
 
 /*margin*/
+.m-4 {
+  margin: 4px;
+}
+
+.mx-12 {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+.my-12 {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.mx-16 {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.my-16 {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
 .mb-4 {
   margin-bottom: 4px;
 }
@@ -67,22 +88,6 @@
   margin-bottom: 16px;
 }
 
-.mx-12 {
-  margin-left: 12px;
-  margin-right: 12px;
-}
-.my-12 {
-  margin-top: 12px;
-  margin-bottom: 12px;
-}
-.mx-16 {
-  margin-left: 16px;
-  margin-right: 16px;
-}
-.my-16 {
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
 /*padding*/
 .p-2 {
   padding: 2px;

@@ -1,8 +1,10 @@
 import Divider from "./divider";
+import Stacks from "./stacks";
 import Tags from "./tags";
 
 const AboutMe = () => {
   const skills = ["React", "Javascript", "Typescript"];
+  const stacks = ["React", "Javascript", "Typescript"];
   const introduce = (
     <>
       프로그래밍이라는 수단을 통해 생각을 표현하고
@@ -14,7 +16,11 @@ const AboutMe = () => {
       <br />
       여러 번의 팀 프로젝트를 통해 협업, 커뮤니케이션을 경험하였고,
       <br />
-      새로운 기술, 언어들에 도전하며 FrontEnd 개발 역량을 길렀습니다.
+      새로운 기술, 언어들에 도전하며{" "}
+      <span className="pSemiBold" style={{ color: "Blue" }}>
+        FrontEnd
+      </span>{" "}
+      개발 역량을 길렀습니다.
       <br />
       앞으로도 계속해서 학습하며 목표하는 개발자로 나아가겠습니다.
     </>
@@ -32,21 +38,28 @@ const AboutMe = () => {
 
         <div className="tag pl-12 py-4">
           <Divider title="TAGS" />
-          <div className="py-8 px-16">
+          <div className="text-24 py-8 px-16">
             <Tags skills={skills} />
           </div>
         </div>
       </div>
 
-      <div className="desc_info flex row">
-        <div className="info pl-12 py-4">
-          <Divider title="INFO" />
+      <div className="desc_info flex row wrap">
+        {/* <div className="education pl-12 py-4">
+          <Divider title="Education" />
+        </div> */}
+        <div className="experience pl-12 py-4">
+          <Divider title="Experience" />
+        </div>
+        <div className="certification pl-12 py-4">
+          <Divider title="Certification" />
         </div>
       </div>
 
       <div className="desc_fe-stack flex row">
         <div className="fe-stack pl-12 py-4">
           <Divider title="Frontend Stack" />
+          <Stacks stacks={stacks}></Stacks>
         </div>
       </div>
 
