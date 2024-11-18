@@ -22,7 +22,7 @@ const Gnb = ({
   };
 
   const { width } = useWindowSizeCustom();
-  const mouseY = useMousePositionDebounce(100);
+  const mouseY = useMousePositionDebounce(100)[1];
 
   useEffect(() => {
     if (width && width < 1024) {

@@ -27,6 +27,7 @@ const MainPage = () => {
         onPageChange={handlePageChange}
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
+        prioritizeChildScroll={true}
       >
         <AboutContainer />
         <ProjectContainer />

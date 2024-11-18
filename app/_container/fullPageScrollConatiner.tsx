@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { TfullPageScroll } from "@/app/_types/types";
 import Dots from "@/app/_components/dots";
+import { throttle } from "lodash";
 
 const FullPageScrollContainer: React.FC<TfullPageScroll> = ({
   children,
@@ -10,6 +11,7 @@ const FullPageScrollContainer: React.FC<TfullPageScroll> = ({
   onPageChange = () => {},
   currentPage,
   setCurrentPage,
+  prioritizeChildScroll = false,
 }) => {
   const outerDivRef = useRef<HTMLDivElement>(null);
   const [menus, setMenus] = useState<string[]>([]);
@@ -52,19 +54,50 @@ const FullPageScrollContainer: React.FC<TfullPageScroll> = ({
     }
   }, [currentPage, scrollTo]);
 
+  const memoizedFindScrollableParent = useMemo(() => {
+    const cache = new WeakMap();
+    return (element: HTMLElement | null) => {
+      if (!element) return null;
+      if (cache.has(element)) return cache.get(element);
+      const result = findScrollableParent(element);
+      cache.set(element, result);
+      return result;
+    };
+  }, []);
+
+  const findScrollableParent = (element: HTMLElement | null) => {
+    while (element) {
+      if (element.scrollHeight > element.clientHeight) {
+        return element;
+      }
+      element = element.parentElement;
+    }
+    return null;
+  };
+
   const wheelHandler = useCallback(
     (e: WheelEvent) => {
-      e.preventDefault();
-
       if (canScrollRef && !canScrollRef.current) return;
+
+      const target = e.target as HTMLElement;
+      const scrollableParent = memoizedFindScrollableParent(target);
+
+      if (prioritizeChildScroll && scrollableParent && scrollableParent !== outerDivRef.current) {
+        return;
+      }
+
       if (e.deltaY > 0) {
         scrollDown();
       } else if (e.deltaY < 0) {
         scrollUp();
       }
     },
-    [scrollDown, scrollUp]
+    [scrollDown, scrollUp, prioritizeChildScroll, memoizedFindScrollableParent]
   );
+
+  const throttleWheelHandler = useMemo(() => {
+    return throttle(wheelHandler, 500);
+  }, [wheelHandler]);
 
   const scrollHandler = useCallback((e: Event) => {
     e.preventDefault();
@@ -99,20 +132,22 @@ const FullPageScrollContainer: React.FC<TfullPageScroll> = ({
     setChildCnt(outer.childElementCount);
     onLoad(outer.childElementCount);
 
-    outer.addEventListener("wheel", wheelHandler);
+    outer.addEventListener("wheel", throttleWheelHandler);
     outer.addEventListener("scroll", scrollHandler);
     outer.addEventListener("touchmove", scrollHandler);
     outer.addEventListener("touchstart", touchHandler);
     outer.addEventListener("touchend", touchHandler);
 
     return () => {
-      outer.removeEventListener("wheel", wheelHandler);
+      outer.removeEventListener("wheel", throttleWheelHandler);
+      throttleWheelHandler.cancel(); // throttle 함수 취소
+
       outer.removeEventListener("scroll", scrollHandler);
       outer.removeEventListener("touchmove", scrollHandler);
       outer.removeEventListener("touchstart", touchHandler);
       outer.removeEventListener("touchend", touchHandler);
     };
-  }, [wheelHandler, scrollHandler, touchHandler, onLoad]);
+  }, [throttleWheelHandler, scrollHandler, touchHandler, onLoad]);
 
   useEffect(() => {
     const menus: string[] = [];

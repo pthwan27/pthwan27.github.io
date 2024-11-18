@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 const useMousePositionDebounce = (delay: number = 100) => {
+  const [mouseX, setMouseX] = useState<number | null>(null);
   const [mouseY, setMouseY] = useState<number | null>(null);
 
   useEffect(() => {
@@ -12,6 +13,7 @@ const useMousePositionDebounce = (delay: number = 100) => {
       }
 
       timeoutId = setTimeout(() => {
+        setMouseX(event.clientX);
         setMouseY(event.clientY);
       }, delay);
     };
@@ -26,7 +28,7 @@ const useMousePositionDebounce = (delay: number = 100) => {
     };
   }, [delay]);
 
-  return mouseY;
+  return [mouseX, mouseY];
 };
 
 export default useMousePositionDebounce;

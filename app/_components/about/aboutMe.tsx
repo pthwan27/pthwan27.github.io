@@ -1,10 +1,22 @@
-import Divider from "./divider";
-import Stacks from "./stacks";
-import Tags from "./tags";
+import TSIcon from "@/app/assets/icons/ts-icon";
+import Divider from "./aboutMe/divider";
+import Stacks from "./aboutMe/stacks";
+import Tags from "./aboutMe/tags";
+
+import ReactIcon from "@/app/assets/icons/react-icon";
+import JSIcon from "@/app/assets/icons/js-icon";
 
 const AboutMe = () => {
   const skills = ["React", "Javascript", "Typescript"];
-  const stacks = ["React", "Javascript", "Typescript"];
+  const stacks = [
+    {
+      stack: "React",
+      icon: ReactIcon,
+    },
+    { stack: "JavaScript", icon: JSIcon },
+    { stack: "Typescript", icon: TSIcon },
+  ];
+
   const introduce = (
     <>
       프로그래밍이라는 수단을 통해 생각을 표현하고
@@ -30,15 +42,15 @@ const AboutMe = () => {
     <div className="desc flex column pLight">
       <div className="desc_intro flex row wrap">
         <div className="introduce pl-12 py-4">
-          <Divider title="INTRODUCE" />
+          <Divider title="Introduce" />
           <div className="py-8 px-16">
             <span className="text-24">{introduce}</span>
           </div>
         </div>
 
         <div className="tag pl-12 py-4">
-          <Divider title="TAGS" />
-          <div className="text-24 py-8 px-16">
+          <Divider title="Tags" />
+          <div className="text-20 py-8 px-16">
             <Tags skills={skills} />
           </div>
         </div>

@@ -5,6 +5,7 @@ export type TfullPageScroll = {
   onPageChange?: (page: number) => void;
   currentPage: number;
   setCurrentPage: React.Dispatch<React.SetStateAction<number>>;
+  prioritizeChildScroll: boolean;
 } & PropsWithChildren;
 
 export type TDot = {
@@ -18,4 +19,9 @@ export type TDots = {
   menus: string[];
   currentIdx: number;
   onDotClick: (idx: number) => void;
+};
+
+export type stack = {
+  stack: string;
+  icon: React.FC;
 };
