@@ -19,24 +19,6 @@ const AboutMe = () => {
   ];
   const timeLineData = [
     {
-      date: "2015.03.02 ~ 2022.02.15",
-      title: "한라대학교",
-      content: "Description for event",
-    },
-    {
-      date: "2021.08.02 ~ 2022.01.27",
-      title: "GST 인턴",
-      content: "Description for event",
-    },
-    {
-      date: "2022.07.16 ~ 2023.06.15",
-      title: "SSAFY 8기",
-      content: "Description for event",
-    },
-  ];
-
-  const timeLineData2 = [
-    {
       start: "2015.03.02",
       end: "2022.02.15",
       title: "한라대학교",
@@ -101,7 +83,7 @@ const AboutMe = () => {
         </div> */}
         <div className="experience pl-12 py-4">
           <Divider title="Experience" />
-          <TimeLine data={timeLineData2} />
+          <TimeLine data={timeLineData} />
         </div>
         <div className="certification pl-12 py-4">
           <Divider title="Certification" />
