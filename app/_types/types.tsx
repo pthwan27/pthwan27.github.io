@@ -25,3 +25,10 @@ export type stack = {
   stack: string;
   icon: React.FC;
 };
+
+export type timeLine = {
+  start: string;
+  end: string;
+  title: string;
+  content: string;
+};

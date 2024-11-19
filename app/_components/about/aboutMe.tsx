@@ -5,6 +5,7 @@ import Tags from "./aboutMe/tags";
 
 import ReactIcon from "@/app/assets/icons/react-icon";
 import JSIcon from "@/app/assets/icons/js-icon";
+import TimeLine from "./aboutMe/timeLine";
 
 const AboutMe = () => {
   const skills = ["React", "Javascript", "Typescript"];
@@ -15,6 +16,44 @@ const AboutMe = () => {
     },
     { stack: "JavaScript", icon: JSIcon },
     { stack: "Typescript", icon: TSIcon },
+  ];
+  const timeLineData = [
+    {
+      date: "2015.03.02 ~ 2022.02.15",
+      title: "한라대학교",
+      content: "Description for event",
+    },
+    {
+      date: "2021.08.02 ~ 2022.01.27",
+      title: "GST 인턴",
+      content: "Description for event",
+    },
+    {
+      date: "2022.07.16 ~ 2023.06.15",
+      title: "SSAFY 8기",
+      content: "Description for event",
+    },
+  ];
+
+  const timeLineData2 = [
+    {
+      start: "2015.03.02",
+      end: "2022.02.15",
+      title: "한라대학교",
+      content: "Description for event",
+    },
+    {
+      start: "2021.08.02",
+      end: "2022.01.27",
+      title: "GST 인턴",
+      content: "Description for event",
+    },
+    {
+      start: "2022.07.16",
+      end: "2023.06.15",
+      title: "SSAFY 8기",
+      content: "Description for event",
+    },
   ];
 
   const introduce = (
@@ -62,6 +101,7 @@ const AboutMe = () => {
         </div> */}
         <div className="experience pl-12 py-4">
           <Divider title="Experience" />
+          <TimeLine data={timeLineData2} />
         </div>
         <div className="certification pl-12 py-4">
           <Divider title="Certification" />
@@ -71,7 +111,7 @@ const AboutMe = () => {
       <div className="desc_fe-stack flex row">
         <div className="fe-stack pl-12 py-4">
           <Divider title="Frontend Stack" />
-          <Stacks stacks={stacks}></Stacks>
+          <Stacks data={stacks}></Stacks>
         </div>
       </div>
 

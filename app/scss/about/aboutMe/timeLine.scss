@@ -1,0 +1,101 @@
+.timeline-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.timeline-container {
+  position: relative;
+  height: 150px;
+  min-width: 100%;
+  width: fit-content;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--secondColor);
+  transform: translateY(-50%);
+}
+
+.timeline-item {
+  position: absolute;
+  width: 100px;
+  height: fit-content;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  bottom: calc(50%);
+  margin-bottom: 10px;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  margin-top: 10px;
+  top: calc(50%);
+}
+
+.timeline-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--thirdColor);
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.timeline-content {
+  position: absolute;
+  width: 100%;
+}
+
+.date {
+  color: var(--gray);
+}
+.content-hover {
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer; /* 호버 가능함을 표시 */
+}
+
+.content-hover:hover .hover-content {
+  opacity: 1;
+  visibility: visible;
+}
+.hover-content {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100px;
+  z-index: 10;
+  transition: all 0.3s ease;
+
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-item .hover-content {
+  bottom: 50%;
+}
+
+// .hover-content::before {
+//   content: "";
+//   position: absolute;
+//   width: 0;
+//   height: 0;
+//   border-left: 8px solid transparent;
+//   border-right: 8px solid transparent;
+//   left: 50%;
+//   transform: translateX(-50%);
+// }
+
+// .timeline-item .hover-content::before {
+//   bottom: -8px;
+//   border-top: 8px solid white;
+// }
