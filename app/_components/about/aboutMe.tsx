@@ -1,21 +1,28 @@
-import TSIcon from "@/app/assets/icons/ts-icon";
 import Divider from "./aboutMe/divider";
-import Stacks from "./aboutMe/stacks";
 import Tags from "./aboutMe/tags";
+import TimeLine from "./aboutMe/timeLine";
+import Stacks from "./aboutMe/stacks";
 
 import ReactIcon from "@/app/assets/icons/react-icon";
 import JSIcon from "@/app/assets/icons/js-icon";
-import TimeLine from "./aboutMe/timeLine";
+import TSIcon from "@/app/assets/icons/ts-icon";
+import GitIcon from "@/app/assets/icons/github-icon";
 
 const AboutMe = () => {
   const skills = ["React", "Javascript", "Typescript"];
-  const stacks = [
+  const feStack = [
     {
       stack: "React",
       icon: ReactIcon,
     },
     { stack: "JavaScript", icon: JSIcon },
     { stack: "Typescript", icon: TSIcon },
+  ];
+  const etcStack = [
+    {
+      stack: "Github",
+      icon: GitIcon,
+    },
   ];
   const timeLineData = [
     {
@@ -31,8 +38,8 @@ const AboutMe = () => {
       content: "Description for event",
     },
     {
-      start: "2022.07.16",
-      end: "2023.06.15",
+      start: "2022.07.13",
+      end: "2023.06.16",
       title: "SSAFY 8기",
       content: "Description for event",
     },
@@ -64,23 +71,20 @@ const AboutMe = () => {
       <div className="desc_intro flex row wrap">
         <div className="introduce pl-12 py-4">
           <Divider title="Introduce" />
-          <div className="py-8 px-16">
+          <div className="py-4 px-16">
             <span className="text-24">{introduce}</span>
           </div>
         </div>
 
         <div className="tag pl-12 py-4">
           <Divider title="Tags" />
-          <div className="text-20 py-8 px-16">
+          <div className="text-20 py-4 px-16">
             <Tags skills={skills} />
           </div>
         </div>
       </div>
 
       <div className="desc_info flex row wrap">
-        {/* <div className="education pl-12 py-4">
-          <Divider title="Education" />
-        </div> */}
         <div className="experience pl-12 py-4">
           <Divider title="Experience" />
           <TimeLine data={timeLineData} />
@@ -93,13 +97,14 @@ const AboutMe = () => {
       <div className="desc_fe-stack flex row">
         <div className="fe-stack pl-12 py-4">
           <Divider title="Frontend Stack" />
-          <Stacks data={stacks}></Stacks>
+          <Stacks data={feStack}></Stacks>
         </div>
       </div>
 
       <div className="desc_etc-stack flex row">
         <div className="etc-stack pl-12 py-4">
           <Divider title="Etc Stack" />
+          <Stacks data={etcStack}></Stacks>
         </div>
       </div>
     </div>

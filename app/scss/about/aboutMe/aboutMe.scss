@@ -8,7 +8,7 @@
   height: 100%;
   color: var(--foreground);
 
-  overflow: scroll;
+  overflow: auto;
   overscroll-behavior: contain;
   &_intro {
     :nth-child(1) {
@@ -42,7 +42,7 @@
   }
 
   &_etc-stack {
-    :first-child {
+    > :nth-child(1) {
       flex: 1 99 100%;
     }
   }

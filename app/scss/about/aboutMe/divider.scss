@@ -1,5 +1,6 @@
 .divider {
-  border-top-color: rgba(0, 0, 0, 0.06);
+  height: 24px;
+  border-top-color: rgba(0, 0, 0, 0.2);
   white-space: nowrap;
 
   &-items {
@@ -9,7 +10,6 @@
 }
 .divider::before {
   position: relative;
-  top: 50%;
   min-width: 8px;
   width: 32px;
   border-top: 1px solid transparent;
@@ -22,7 +22,6 @@
 
 .divider::after {
   position: relative;
-  top: 50%;
   width: 95%;
   border-top: 1px solid transparent;
   border-top-color: transparent;

@@ -2,7 +2,7 @@ import { stack } from "@/app/_types/types";
 
 const Stacks = ({ data }: { data: stack[] }) => {
   return (
-    <div className="flex">
+    <div className="flex row">
       {data.map((item, index) => (
         <div key={index} className="stack-item center column">
           <item.icon />

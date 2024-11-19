@@ -30,7 +30,7 @@ const TimeLine = ({ data }: { data: timeLine[] }) => {
         <div className="timeline-line" />
         {data.map((item, idx) => (
           <div key={idx} className="timeline-item" style={getLeftPosition(item.start)}>
-            <div className="timeline-dot" />
+            <div className="timeline-dot br-full" />
             <div className="content-hover">
               <div className="timeline-content">
                 <div className="title text-14 pBold">{item.title}</div>

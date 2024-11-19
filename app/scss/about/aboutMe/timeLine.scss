@@ -32,8 +32,8 @@
 }
 
 .timeline-item:nth-child(odd) .timeline-content {
-  margin-top: 10px;
   top: calc(50%);
+  margin-top: 10px;
 }
 
 .timeline-dot {
@@ -41,7 +41,6 @@
   width: 8px;
   height: 8px;
   background: var(--thirdColor);
-  border-radius: 50%;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -56,15 +55,11 @@
 .date {
   color: var(--gray);
 }
+
 .content-hover {
   position: relative;
   transition: all 0.3s ease;
-  cursor: pointer; /* 호버 가능함을 표시 */
-}
-
-.content-hover:hover .hover-content {
-  opacity: 1;
-  visibility: visible;
+  cursor: pointer;
 }
 .hover-content {
   opacity: 0;
@@ -79,9 +74,17 @@
   left: 50%;
   transform: translateX(-50%);
 }
+.content-hover:hover .hover-content {
+  opacity: 1;
+  visibility: visible;
+}
 
-.timeline-item .hover-content {
-  bottom: 50%;
+.timeline-item:nth-child(even) .hover-content {
+  bottom: 0%;
+}
+
+.timeline-item:nth-child(odd) .hover-content {
+  top: 0%;
 }
 
 // .hover-content::before {
