@@ -12,7 +12,7 @@ const ProjectContainer = () => {
     { id: 4, title: "project4", component: "" },
     { id: 5, title: "project5", component: "" },
   ];
-  const handleProjectClick = (projectId: number, isSliding: boolean) => {
+  const handleProjectClick = (projectId: number) => {
     setIsSliding(true);
 
     if (projectId === selectedProject) {
@@ -35,7 +35,7 @@ const ProjectContainer = () => {
           <div
             key={project.id}
             className="project-card center shadow-box"
-            onClick={() => handleProjectClick(project.id, isSliding)}
+            onClick={() => handleProjectClick(project.id)}
           >
             {project.title}
           </div>
