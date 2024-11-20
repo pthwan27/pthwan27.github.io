@@ -30,7 +30,7 @@ const ProjectContainer = () => {
           </div>
         </div>
       )}
-      <div className="grid-view flex gap-20">
+      <div className="grid-view non-scrollable flex gap-20">
         {projects.map((project) => (
           <div
             key={project.id}

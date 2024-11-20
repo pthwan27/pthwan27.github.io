@@ -67,7 +67,10 @@ const FullPageScrollContainer: React.FC<TfullPageScroll> = ({
 
   const findScrollableParent = (element: HTMLElement | null) => {
     while (element) {
-      if (element.scrollHeight > element.clientHeight) {
+      if (
+        !element.classList.contains("non-scrollable") &&
+        element.scrollHeight > element.clientHeight
+      ) {
         return element;
       }
       element = element.parentElement;
