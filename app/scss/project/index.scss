@@ -2,12 +2,12 @@
   background: linear-gradient(355deg, rgba(255, 224, 195, 1) 0%, rgba(78, 215, 101, 0.25) 100%);
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 
   justify-content: center;
   align-items: end;
-
   overflow: hidden;
+
   .grid-view {
     position: absolute;
     justify-content: center;
@@ -15,7 +15,7 @@
     overflow: hidden;
 
     width: 100%;
-    height: 50%;
+    height: 80%;
 
     perspective: 1000px;
     z-index: 3;
@@ -23,23 +23,29 @@
     .project-card {
       position: relative;
       margin-top: auto;
-      width: 30%;
-      height: 80%;
+      width: 18%;
+      height: 40%;
+
       background-color: white;
       cursor: pointer;
-      transition: all 0.3s ease;
-      transform-origin: center;
+      transition: all 0.5s ease;
+      transform-origin: bottom center;
 
       @for $i from 1 through 5 {
         &:nth-child(#{$i}) {
+          margin-left: -20px;
+          margin-right: -20px;
+
           $translateY: 0px;
-          $rotation: -20deg * (3 - $i);
+          $rotation: -10deg * (3 - $i);
 
           @if $i == 1 or $i == 5 {
-            margin-bottom: -100px;
+            margin-bottom: -30px;
             $translateY: 120px;
-          } @else if $i == 2 or $i == 4 {
-            margin-bottom: -50px;
+          } @else if $i == 2 {
+            margin-bottom: -35px;
+          } @else if $i == 4 {
+            margin-bottom: -35px;
           } @else {
             margin-bottom: 0;
           }
@@ -48,6 +54,11 @@
 
           &:hover {
             transform: scale(1.1) rotate($rotation) translateY(calc($translateY));
+          }
+          &.selected {
+            transform: translateY(-50%) scale(1.2);
+            z-index: 10;
+            transition: all 0.5s ease;
           }
         }
       }
@@ -60,26 +71,23 @@
   .selected-view {
     position: absolute;
     width: 90%;
-    height: 70%;
+    height: 80%;
     z-index: 5;
     background-color: white;
 
-    top: 100%;
+    top: -100%;
     left: 50%;
 
     transform: translate(-50%, -50%);
-
-    transition: top 0.5s ease-out, transform 0.5s ease-out;
+    transition: all 1s ease;
 
     &.slide-up {
-      top: 50%;
-      transform: translate(-50%, -50%);
+      top: 45%;
+      opacity: 1;
     }
-
     .main-project {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      width: 100%;
+      height: 100%;
       transition: transform 0.3s ease;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     }
