@@ -1,3 +1,78 @@
 .project-container {
   background: linear-gradient(355deg, rgba(255, 224, 195, 1) 0%, rgba(78, 215, 101, 0.25) 100%);
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  justify-content: center;
+  align-items: end;
+
+  overflow-y: hidden;
+
+  .grid-view {
+    position: absolute;
+    bottom: -10%;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 2;
+
+    align-items: end;
+
+    perspective: 1000px;
+
+    overflow-y: hidden;
+    .project-card {
+      width: 40%;
+      height: 30%;
+
+      background-color: white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      transform-origin: center;
+
+      @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+          $rotation: -25deg + ($i - 1) * 10deg;
+          transform: rotate($rotation);
+
+          &:hover {
+            transform: scale(1.1) translateY(-20px) rotate($rotation);
+          }
+        }
+      }
+      &:hover {
+        z-index: 10;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+  .selected-view {
+    position: absolute;
+    width: 90%;
+    height: 70%;
+    z-index: 3;
+    background-color: white;
+
+    top: 100%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    transition: top 0.5s ease-out, transform 0.5s ease-out;
+
+    &.slide-up {
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .main-project {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s ease;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+  }
 }

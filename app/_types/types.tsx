@@ -32,3 +32,8 @@ export type timeLine = {
   title: string;
   content: string;
 };
+export type project = {
+  id: number;
+  title: string;
+  component: string;
+};
