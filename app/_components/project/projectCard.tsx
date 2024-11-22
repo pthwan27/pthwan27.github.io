@@ -1,7 +1,7 @@
 import { Project } from "@/app/_types/types";
 import Image from "next/image";
 import { ForwardedRef } from "react";
-const ProfileImage = "/images/profile.jpg";
+const tempImage = "https://picsum.photos/id/13/200/150";
 
 const ProjectCard = ({
   project,
@@ -20,7 +20,7 @@ const ProjectCard = ({
       className={`project-card center shadow-box ${isSelected ? "selected" : ""}`}
       onClick={() => onClick(project.id)}
     >
-      <Image src={ProfileImage} fill alt="project intro Image"></Image>
+      <Image src={tempImage} fill alt="project intro Image"></Image>
       {project.title}
     </div>
   );

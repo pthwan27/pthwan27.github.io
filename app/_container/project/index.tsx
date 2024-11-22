@@ -22,10 +22,6 @@ const ProjectContainer = () => {
     projectCardRefs.current = projects.map(() => null);
   });
 
-  useEffect(() => {
-    console.log(projectCardRefs);
-  });
-
   return (
     <div className="project-container section flex">
       {selectedProject && showSelectedView && (
