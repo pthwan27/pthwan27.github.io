@@ -1,6 +1,6 @@
-import { timeLine } from "@/app/_types/types";
+import { TimeLine } from "@/app/_types/types";
 
-const TimeLine = ({ data }: { data: timeLine[] }) => {
+const Experience = ({ data }: { data: TimeLine[] }) => {
   const getTimelineRange = () => {
     const startDates = data.map((item) => new Date(item.start).getTime());
     const endDates = data.map((item) => new Date(item.end).getTime());
@@ -48,4 +48,4 @@ const TimeLine = ({ data }: { data: timeLine[] }) => {
   );
 };
 
-export default TimeLine;
+export default Experience;

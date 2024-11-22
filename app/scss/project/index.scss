@@ -24,7 +24,7 @@
       position: relative;
       margin-top: auto;
       width: 18%;
-      height: 40%;
+      height: 55%;
 
       background-color: white;
       cursor: pointer;
@@ -33,8 +33,8 @@
 
       @for $i from 1 through 5 {
         &:nth-child(#{$i}) {
-          margin-left: -20px;
-          margin-right: -20px;
+          margin-left: -40px;
+          margin-right: -40px;
 
           $translateY: 0px;
           $rotation: -10deg * (3 - $i);
@@ -56,7 +56,7 @@
             transform: scale(1.1) rotate($rotation) translateY(calc($translateY));
           }
           &.selected {
-            transform: translateY(-50%) scale(1.2);
+            transform: translateY(-20%) scale(1.2);
             z-index: 10;
             transition: all 0.5s ease;
           }
@@ -89,7 +89,6 @@
       width: 100%;
       height: 100%;
       transition: transform 0.3s ease;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     }
   }
 }

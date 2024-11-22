@@ -1,6 +1,6 @@
 import Divider from "./aboutMe/divider";
 import Tags from "./aboutMe/tags";
-import TimeLine from "./aboutMe/timeLine";
+import Experience from "./aboutMe/timeLine";
 import Stacks from "./aboutMe/stacks";
 
 import ReactIcon from "@/app/assets/icons/react-icon";
@@ -87,7 +87,7 @@ const AboutMe = () => {
       <div className="desc_info flex row wrap">
         <div className="experience pl-12 py-4">
           <Divider title="Experience" />
-          <TimeLine data={timeLineData} />
+          <Experience data={timeLineData} />
         </div>
         <div className="certification pl-12 py-4">
           <Divider title="Certification" />

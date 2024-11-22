@@ -21,18 +21,18 @@ export type TDots = {
   onDotClick: (idx: number) => void;
 };
 
-export type stack = {
+export type Stack = {
   stack: string;
   icon: React.FC;
 };
 
-export type timeLine = {
+export type TimeLine = {
   start: string;
   end: string;
   title: string;
   content: string;
 };
-export type project = {
+export type Project = {
   id: number;
   title: string;
   component: string;
