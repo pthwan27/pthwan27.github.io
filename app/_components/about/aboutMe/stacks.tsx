@@ -1,6 +1,6 @@
-import { stack } from "@/app/_types/types";
+import { Stack } from "@/app/_types/types";
 
-const Stacks = ({ data }: { data: stack[] }) => {
+const Stacks = ({ data }: { data: Stack[] }) => {
   return (
     <div className="flex row">
       {data.map((item, index) => (
