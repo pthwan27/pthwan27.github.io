@@ -1,7 +1,7 @@
 import { Project } from "@/app/_types/types";
 import Image from "next/image";
 import { ForwardedRef } from "react";
-const ProfileImage = "";
+const ProfileImage = "/images/profile.jpg";
 
 const ProjectCard = ({
   project,
