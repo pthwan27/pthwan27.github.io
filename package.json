@@ -10,8 +10,7 @@
     "start": "next start",
     "lint": "next lint",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d out -t true",
-    "vercel-build": "next build"
+    "deploy": "gh-pages -d out -t true"
   },
   "dependencies": {
     "@svgr/webpack": "^8.1.0",
