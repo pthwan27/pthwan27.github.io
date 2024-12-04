@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const isProd = process.env.NODE_ENV === "production";
-const repoName = "pthwan27.github.io";
+const repoName = "/";
 /**
  * @type {import('next').NextConfig}
  */
