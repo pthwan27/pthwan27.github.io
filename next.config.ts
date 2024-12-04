@@ -16,12 +16,12 @@ const nextConfig: NextConfig = {
     });
     return config;
   },
-  basePath: "",
   images: {
     domains: ["picsum.photos"],
     unoptimized: true,
   },
-  assetPrefix: isProd ? `/${repoName}/` : "",
+  basePath: "",
+  assetPrefix: "",
   sassOptions: {
     silenceDeprecations: ["legacy-js-api"],
   },
