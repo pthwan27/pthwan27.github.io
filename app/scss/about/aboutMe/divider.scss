@@ -1,32 +1,33 @@
 .divider {
   height: 24px;
-  border-top-color: rgba(0, 0, 0, 0.2);
+  width: calc(90%);
   white-space: nowrap;
-
-  &-items {
-    display: inline-block;
-    text-align: left;
-  }
 }
+
 .divider::before {
   position: relative;
-  min-width: 8px;
-  width: 32px;
-  border-top: 1px solid transparent;
-  border-top-color: transparent;
+
+  min-width: 5%;
+  max-width: 5%;
+
+  border-top: 1px solid;
   border-top-color: inherit;
-  border-bottom: 0;
+
   transform: translateY(50%);
+
+  margin-right: 5px;
   content: "";
 }
 
 .divider::after {
   position: relative;
   width: 95%;
-  border-top: 1px solid transparent;
-  border-top-color: transparent;
+
+  border-top: 1px solid;
   border-top-color: inherit;
-  border-bottom: 0;
+
   transform: translateY(50%);
+
+  margin-left: 5px;
   content: "";
 }

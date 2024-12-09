@@ -10,7 +10,11 @@ const SelectedView = ({
   if (!project) return;
 
   return (
-    <div className={`selected-view center gap-20 shadow-box ${isSliding ? "slide-up" : ""}`}>
+    <div
+      className={`selected-view center gap-5 shadow-box ${
+        isSliding ? "slide-up" : ""
+      }`}
+    >
       <div className="main-project center">{project.title}</div>
     </div>
   );

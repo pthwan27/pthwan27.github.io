@@ -1,0 +1,68 @@
+.intro {
+  &__profile {
+    .cover {
+      overflow: hidden;
+
+      background-color: transparent;
+
+      img {
+        margin: auto;
+      }
+    }
+    .tag {
+      div {
+        font-style: italic;
+        background-color: var(--firstColor);
+        text-align: center;
+      }
+    }
+  }
+  &__name {
+    margin: auto 0;
+
+    .first-text {
+      color: var(--foreground);
+    }
+
+    @media (max-width: 768px) {
+      .sec-text::before {
+        content: "Frontend ";
+        color: var(--mainColor);
+      }
+    }
+
+    .intro__desc {
+      color: var(--mainColor);
+      @media (max-width: 768px) {
+        display: none;
+      }
+
+      .first-text {
+        color: var(--foreground);
+      }
+      .sec-text {
+        font-size: 32px;
+        color: var(--mainColor);
+        :last-child {
+          color: var(--foreground);
+        }
+      }
+
+      .cursor {
+        bottom: 2px;
+        border-left: 3px solid var(--foreground);
+        animation: blink 1s step-start infinite;
+      }
+
+      @keyframes blink {
+        50% {
+          opacity: 0;
+        }
+      }
+    }
+
+    .sec-text {
+      color: var(--foreground);
+    }
+  }
+}

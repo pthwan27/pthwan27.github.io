@@ -3,9 +3,9 @@ import { TDot, TDots } from "../_types/types";
 
 const Dots: React.FC<TDots> = ({ menus, currentIdx, onDotClick }) => {
   return (
-    <div className="dots-container">
-      <div className="dots-container-bg">
-        <div className="dots-container-items">
+    <div className="dots-container fixed">
+      <div className="dots-container-bg relative center">
+        <div className="dots-container-items flex-col center">
           {menus.map((menu, idx) => (
             <Dot
               key={idx}
@@ -24,12 +24,16 @@ const Dot: React.FC<TDot> = ({ menu, index, currentIdx, onClick }) => {
   const selected = index === currentIdx;
   return (
     <div
-      className={`dot-item-container ${selected ? "selected" : ""}`}
+      className={`dot-item-container center ${selected ? "selected" : ""}`}
       onClick={() => onClick(index)}
     >
-      <span className={`dot-item-inner ${selected ? "selected" : ""}`}>
-        <div className={selected ? "selected" : ""}></div>
-        <Image src={`/icons/${menu}.svg`} width={20} height={20} alt="" />
+      <span
+        className={`dot-item-inner relative center cursor-pointer ${
+          selected ? "selected" : ""
+        }`}
+      >
+        <div className={`absolute ${selected ? "selected" : ""}`}></div>
+        <Image src={`/icons/${menu}.svg`} width={26} height={26} alt="" />
       </span>
     </div>
   );

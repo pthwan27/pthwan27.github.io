@@ -16,8 +16,6 @@
 // }
 
 .gnb {
-  display: flex;
-  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -37,9 +35,7 @@
 }
 
 .gnb-container {
-  display: flex;
   flex-basis: 100%;
-  flex-wrap: wrap;
 
   transition: transform 0.3s ease-in-out;
   transform: translateY(0);
@@ -47,13 +43,8 @@
   &__navbar {
     font-size: 16px;
 
-    display: flex;
-    flex-wrap: nowrap;
-
     li {
       margin: 24px 8px 20px 20px;
-      display: flex;
-      align-items: center;
     }
   }
 }
@@ -62,10 +53,6 @@
   transform: translateY(-110%);
 }
 
-.gnb-container__navbar li a {
-  position: relative;
-  text-decoration: none;
-}
 .gnb-container__navbar li a::after {
   content: "";
   position: absolute;

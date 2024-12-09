@@ -19,7 +19,8 @@ const Experience = ({ data }: { data: TimeLine[] }) => {
     const usableWidth = 70; // 사용할 전체 너비
     const margin = (100 - usableWidth) / 5; // 양쪽 여백
 
-    const leftPosition = ((startTime - minDate) / totalDuration) * usableWidth + margin;
+    const leftPosition =
+      ((startTime - minDate) / totalDuration) * usableWidth + margin;
 
     return { left: `${leftPosition}%` };
   };
@@ -29,14 +30,18 @@ const Experience = ({ data }: { data: TimeLine[] }) => {
       <div className="timeline-container center">
         <div className="timeline-line" />
         {data.map((item, idx) => (
-          <div key={idx} className="timeline-item" style={getLeftPosition(item.start)}>
-            <div className="timeline-dot br-full" />
+          <div
+            key={idx}
+            className="timeline-item"
+            style={getLeftPosition(item.start)}
+          >
+            <div className="timeline-dot rounded-full" />
             <div className="content-hover">
               <div className="timeline-content">
                 <div className="title text-14 pBold">{item.title}</div>
                 <div className="date text-10">{item.start}</div>
                 <div className="date text-10">{item.end}</div>
-                <div className="hover-content p-4 br-12">
+                <div className="hover-content p-1 rounded-xl">
                   <p>{item.content}</p>
                 </div>
               </div>

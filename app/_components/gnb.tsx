@@ -42,15 +42,26 @@ const Gnb = ({
   }, [mouseY, currentPage]);
 
   return (
-    <nav className="gnb gnb-light">
-      <div className={`gnb-container ${isShowGnb ? "visible" : "invisible"}`}>
+    <nav className="gnb gnb-light flex absolute">
+      <div
+        className={`gnb-container flex flex-wrap ${
+          isShowGnb ? "visible" : "invisible"
+        }`}
+      >
         <ul
-          className={`gnb-container__navbar
+          className={`gnb-container__navbar flex flex-nowrap
             ${isDropdown ? "visible" : "hidden"} `}
         >
           {menuItems.map((menu, idx) => (
-            <li key={menu + idx} className={currentPage === idx ? "active" : ""}>
-              <a href={`#${menu}`} onClick={(e) => handleLinkClick(idx, e)}>
+            <li
+              key={menu + idx}
+              className={`flex center ${currentPage === idx ? "active" : ""}`}
+            >
+              <a
+                className="relative"
+                href={`#${menu}`}
+                onClick={(e) => handleLinkClick(idx, e)}
+              >
                 {menu}
               </a>
             </li>

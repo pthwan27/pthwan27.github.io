@@ -3,6 +3,10 @@
 @use "animation.scss";
 @use "reusableClass.scss";
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --white: #edede9;
   --black: #0a0a0a;

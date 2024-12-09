@@ -4,8 +4,8 @@ const ProfileImage = "/images/profile.jpg";
 
 const Profile = () => {
   return (
-    <div className="intro__profile pl-20 pb-20">
-      <div className="cover br-full">
+    <div className="intro__profile flex flex-col pl-5 pb-5">
+      <div className="cover flex rounded-full">
         <Image
           src={ProfileImage}
           width={120}
@@ -15,12 +15,12 @@ const Profile = () => {
           alt="profile"
         />
       </div>
-      <div className="tag">
+      <div className="tag flex flex-col justify-center">
         <a className="center py-2" href="https://github.com/pthwan27">
           pthwan27
           <GithubMark />
         </a>
-        <div className="pExtraThin br-20 py-2">Frontend</div>
+        <div className="pExtraThin rounded-3xl py-1">Frontend</div>
       </div>
     </div>
   );

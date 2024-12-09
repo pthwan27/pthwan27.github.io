@@ -30,14 +30,16 @@ const ProjectContainer = () => {
           isSliding={isSliding}
         />
       )}
-      <div className="grid-view non-scrollable flex gap-20">
+      <div className="grid-view non-scrollable flex gap-5">
         {projects.map((project, idx) => (
           <ProjectCard
             project={project}
             key={project.id}
             isSelected={selectedProject === project.id}
             onClick={() => handleProjectClick(project.id)}
-            ref={(el: HTMLDivElement | null) => (projectCardRefs.current[idx] = el)}
+            ref={(el: HTMLDivElement | null) =>
+              (projectCardRefs.current[idx] = el)
+            }
           />
         ))}
       </div>
