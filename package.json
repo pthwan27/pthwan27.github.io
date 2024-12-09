@@ -13,7 +13,9 @@
     "deploy": "gh-pages -d out -t true"
   },
   "dependencies": {
+    "@notionhq/client": "^2.2.15",
     "@svgr/webpack": "^8.1.0",
+    "axios": "^1.7.9",
     "framer-motion": "^11.11.11",
     "gh-pages": "^6.2.0",
     "lodash": "^4.17.21",
