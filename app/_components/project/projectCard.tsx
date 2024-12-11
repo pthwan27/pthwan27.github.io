@@ -1,6 +1,6 @@
 import { Project } from "@/app/_types/types";
 import Image from "next/image";
-import { ForwardedRef, useEffect, useState } from "react";
+import { ForwardedRef, useEffect } from "react";
 
 const tempImage = "https://picsum.photos/id/13/200/150";
 
