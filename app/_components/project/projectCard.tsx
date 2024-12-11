@@ -15,7 +15,7 @@ const ProjectCard = ({
   onClick: (id: number) => void;
   ref: ForwardedRef<HTMLDivElement>;
 }) => {
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
 
   useEffect(() => {
     const getData = async () => {
